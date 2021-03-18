@@ -8,7 +8,7 @@ import (
 	"testing"
 	"unicode/utf8"
 
-	"github.com/json-iterator/go"
+	"github.com/let-s-go/jsoniter"
 	"github.com/stretchr/testify/require"
 )
 
