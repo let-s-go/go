@@ -297,6 +297,7 @@ func (cfg *frozenConfig) Marshal(v interface{}) ([]byte, error) {
 	stream := cfg.BorrowStream(nil)
 	defer cfg.ReturnStream(stream)
 	stream.WriteVal(v)
+	stream.WriteRaw("\n")
 	if stream.Error != nil {
 		return nil, stream.Error
 	}
